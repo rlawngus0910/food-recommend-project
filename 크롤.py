@@ -17,7 +17,7 @@ driver = webdriver.Chrome('c:\chromedriver.exe')
 driver.get('https://www.instagram.com')
 time.sleep(2)
 
-email = '인스타 아이디'       #인스타그램 로그인  #<직장인을 위한 데이터 분석 실무> 참고
+email = '인스타 아이디'       #인스타그램 로그인 <직장인을 위한 데이터 분석 실무> 참고
 input_id = driver.find_elements_by_css_selector('input._2hvTZ.pexuQ.zyHYP')[0]
 input_id.clear()
 input_id.send_keys(email)
@@ -28,7 +28,7 @@ input_pw.clear()
 input_pw.send_keys(password)
 input_pw.submit()
 
-time.sleep(2)       #검색어 입력
+time.sleep(3)       #검색어 입력
 word = '검색어'
 url = searching(word)
 driver.get(url)
