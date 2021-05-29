@@ -20,6 +20,7 @@ def register(request):
         elif password != re_password:
             res_data['error'] = "비밀번호가 다릅니다."
         else:
+            res_data['success'] = "회원가입이 완료되었습니다."
             user = Account(id=id, password=make_password(password), birth="2019-01-01", gender="남자")
             user.save()
         return render(request, 'account/register.html', res_data)
