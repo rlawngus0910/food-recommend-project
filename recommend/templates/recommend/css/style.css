@@ -1,0 +1,359 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-weight: 100;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #333333;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #FFD662;
+    color: #000000;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    border-radius: 5px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+
+/*******************************/
+/********** Header CSS *********/
+/*******************************/
+.header {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 0 0;
+    background: #00539C;
+}
+
+.header.home {
+    margin-bottom: 45px;
+    background: linear-gradient(rgba(0, 83, 156, 1), rgba(0, 83, 156, .9), rgba(0, 83, 156, 1)), url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+    .header .row {
+        padding: 0 60px;
+    }
+}
+
+.header .header-top {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.header .brand {
+    position: relative;
+}
+
+.header .brand a {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.header .brand img {
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 100px;
+}
+
+.header .topbar {
+    position: relative;
+    text-align: right;
+}
+
+.header .topbar .topbar-col {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.header .topbar-col a {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.header .topbar-col a i {
+    margin-right: 10px;
+    color: #FFD662;
+}
+
+.header .topbar-social {
+    position: relative;
+}
+
+.header .topbar-social a {
+    display: inline-block;
+}
+
+.header .topbar-social a i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.header .topbar-social a:last-child i {
+    margin: 0;
+}
+
+.header .topbar-social a:hover i {
+    color: #FFD662;
+}
+
+.header .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+.header .dropdown-menu a.active {
+    color: #FFD662;
+}
+
+@media (min-width: 992px) {
+    .header .navbar {
+        background: transparent !important;
+    }
+    
+    .header .navbar-brand {
+        display: none;
+    }
+    
+    .header .navbar-light a.nav-link,
+    .header .navbar-light .show > .nav-link {
+        position: relative;
+        padding: 8px 10px;
+        color: #ffffff;
+        font-size: 16px;
+        z-index: 1;
+    }
+    
+    .header .navbar-light a.nav-link:hover,
+    .header .navbar-light a.nav-link.active {
+        color: #FFD662;
+    }
+}
+
+@media (max-width: 992px) {
+    .header .brand {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .header .topbar {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .header .topbar .topbar-col {
+        margin: 0;
+    }
+    
+    .header .topbar .topbar-social {
+        margin-top: 5px;
+    }
+    
+    .header .navbar {
+        background: #ffffff !important;
+        border: none;
+        z-index: 1;
+    }
+    
+    .header a.nav-link {
+        padding: 5px 0;
+    }
+    
+    .header .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+.header .navbar .btn {
+    position: relative;
+    margin-left: 15px;
+    padding: 12px 20px 10px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #00539C;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header .navbar .btn:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+.header .navbar .btn i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .header .navbar {
+        border-radius: 5px;
+    }
+    
+    .header .navbar .btn {
+        display: none;
+    }
+}
+
+.header .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.header .hero h2 {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.header .hero h2 span {
+    color: #FFD662;
+}
+
+.header .hero p {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.header .hero a.btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #00539C;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header .hero a.btn:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+.header .hero .form {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+}
+
+.header .hero .form h3 {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.header .hero .form input,
+.header .hero .form select,
+.header .hero .form textarea {
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .2);
+}
+
+.header .hero .form textarea {
+    height: 75px;
+}
+
+.header .hero .form select,
+.header .hero .form input::placeholder,
+.header .hero .form textarea::placeholder {
+    color: #ffffff;
+}
+
+.header .hero .form select option:not(:checked) {
+    color: #666666;
+}
+
+.header .hero .form .btn {
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.header .hero .form .btn:hover {
+    color: #00539C;
+    background: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+    .header .hero .form {
+        margin-top: 45px;
+    }
+}
