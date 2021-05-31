@@ -1,0 +1,63 @@
+.allbg{
+    background: linear-gradient(rgb(0 12 156 / 70%), rgb(0 55 156 / 80%), rgb(0 55 156 / 90%)),url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 570px;
+    width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+#name{
+    position: relative;
+    top: 20px;
+    left: 45px;
+    font-size: 50px;
+    width: 300px;
+    color: azure;
+}
+
+#cho{
+    position: relative;
+    left: 20px;
+    top: 40px;
+    margin-bottom: 30px;
+    width: 650px;
+    font-size: 20px;
+}
+
+.form{
+    overflow:auto; 
+    width:750px; 
+    height:400px;
+    position: relative;
+    top: 20px;
+    background-color:  rgba(255, 255, 255, .3);
+}
+
+.form::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+
+.form::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.bt{
+    left: 48%;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
+    border: 0px;
+    width: 60px;
+}
+
+.bt:hover{
+    background-color: gray;
+}

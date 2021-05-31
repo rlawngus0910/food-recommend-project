@@ -1,0 +1,134 @@
+<!-- The MIT License (MIT)
+
+Copyright (c) 2011-2021 Twitter, Inc.
+Copyright (c) 2011-2021 The Bootstrap Authors -->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Mattam-reccomend</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/service.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand">
+                                <!--여기에 메인화면 링크 연결-->
+                                <a href="index.html">
+                                    MatTam
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <!--메인 링크 연결-->
+                                        <a href="about.html" class="nav-item nav-link">Home</a>
+                                        <!--첫번째 문제 페이지 링크 연결-->
+                                        <a href="Q&A(1).html" class="nav-item nav-link">Recommend</a>
+                                        <!--게시판 메인 페이지 링크 연결-->
+                                        <a href="portfolio.html" class="nav-item nav-link">Post</a>
+                                        <!--별점 작성 페이지 링크 연결-->
+                                        <a href="single.html" class="nav-item nav-link">Evaluation</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+            <div class="allbg container">
+
+                <div id="name" class="container">
+                    <p>추천하는 음식점</p>
+                </div>
+    
+                <div class="form container">
+                    <!--아래의 div로 감싸진 부분이 한개의 음식점을 추천하는 파트임-->
+                    <div id="cho" class="container">
+                        <ul class="list-group list-group-horizontal">
+                             <li class="list-group-item">
+                                 <!--한식, 중식, 일식, 양식, 기타 중 하나의 이미지가 들어감(img 파일 안에 각 이미지 넣어둠)-->
+                                 <img src="img/hansik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                             </li>
+        
+                            <li class="list-group-item">
+                            <ul class="list-group">
+        
+                            <li class="list-group-item border-0" style="padding-left: 1px; padding-bottom: 1px; padding-top: 1px;">
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px;">가게이름: </li>
+                                <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px; width: 200px;">(DB로 불러온 이름)</li>
+                                <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 1px;">
+                                    <img src="img/star.PNG" class="img-thumbnail" alt="..." width="70" height="70">
+                                </li>
+                            </ul>
+                            </li>
+                            
+                            <li class="list-group-item border-0" style="padding-left: 1px; padding-top: 1px;">
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right: 5px;">메뉴: </li>
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right:5px; width: 250px;">(메뉴들)</li>
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right: 1px;">0km</li>
+                            </ul>
+                            </li>
+                            <!--해당 음식점의 게시글이 모인 페이지 링크 연결-->
+                            <button type="button" onclick="location.href='https://www.naver.com/'" class="btn btn-outline-primary">더보기</button>
+                        </ul>
+                        </li>
+                    </ul>
+                    </div>
+                    <!--여기까지가 하나의 음식점을 추천해주는 부분. 이 부분이 여러개 필요함-->
+
+                </div>
+                <!--메인 링크 연결-->
+                <button type="button" onclick="location.href='Q&A(1).html'" class="bt container">확인</button>
+    
+            </div>
+    </body>
+</html>
