@@ -23,8 +23,13 @@
         <!-- Template Stylesheet -->
         <link href="../../static/css/style.css" rel="stylesheet">
     </head>
-
     <body>
+        <script>
+
+            if("{{ message }}".length != 0)
+                alert("{{message}}");
+
+        </script>
         <div class="wrapper">
             <!-- Header Start -->
             <div class="header home">
@@ -190,5 +195,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
     </body>
 </html>
