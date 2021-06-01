@@ -1,0 +1,19 @@
+p{
+    text-align: center; 
+    font-size: 30px;
+}
+
+.name{
+    resize: none;
+    width: 800px; 
+    height: 30px;
+    margin-left: 230px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    resize: none;
+    width: 800px; 
+    height: 400px;
+    margin-left: 230px;
+}

@@ -1,0 +1,104 @@
+<!-- The MIT License (MIT)
+
+Copyright (c) 2011-2021 Twitter, Inc.
+Copyright (c) 2011-2021 The Bootstrap Authors -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+        <title>evaluation</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/evaluation.css">
+</head>
+<body>
+    <div class="header home">
+        <div class="container-fluid">
+            <div class="header-top row align-items-center">
+                <div class="col-lg-3">
+                    <div class="brand">
+                        <!--여기에 메인화면 링크 연결-->
+                        <a href="index.html">
+                            MatTam
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="topbar">
+                        <div class="topbar-col">
+                            <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                        </div>
+                        <div class="topbar-col">
+                            <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                        </div>
+                        <div class="topbar-col">
+                            <div class="topbar-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar navbar-expand-lg bg-light navbar-light">
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav ml-auto">
+                                <!--메인 링크 연결-->
+                                <a href="about.html" class="nav-item nav-link">Home</a>
+                                <!--첫번째 문제 페이지 링크 연결-->
+                                <a href="Q&A(1).html" class="nav-item nav-link">Recommend</a>
+                                <!--게시판 메인 페이지 링크 연결-->
+                                <a href="gesipan.html" class="nav-item nav-link">Post</a>
+                                <!--별점 작성 페이지 링크 연결-->
+                                <a href="evaluation.html" class="nav-item nav-link">Evaluation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero row align-items-center">
+                <div class="form">
+                    <h3>별점 주기</h3>
+                    <form>
+                        <input class="form-control" type="text" placeholder="음식점 이름">
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+                            <label for="5-stars" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+                            <label for="4-stars" class="star">★</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+                            <label for="3-stars" class="star">★</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+                            <label for="2-stars" class="star">★</label>
+                            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+                            <label for="1-star" class="star">★</label>
+                        </div>
+                        <input class="form-control" type="text" placeholder="한줄평">
+                        <button class="btn btn-block">주기</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

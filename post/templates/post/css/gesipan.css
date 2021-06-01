@@ -1,0 +1,23 @@
+#table{
+    position: relative;
+    font-size: 13px;
+    top: 80px;
+}
+#page{
+    text-align: center;
+}
+.pagination{
+    justify-content: center;
+}
+#name{
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    top: 50px;
+}
+#button2{
+    position: relative;
+    font-size: 12px;
+    left: 1100px;
+    top: 70px;
+}
