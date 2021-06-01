@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CleanMe - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="../../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../../static/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">  
+                            <div class="brand"> <!-- brand는 앱 이름 넣기 -->
+                                <!--만약 로그인을 한 이후라면 index.html이 아닌 페이지를 불러야 될지도? 로그인 기능을 잘 모릅니다.-->
+                                <a href="index.html">
+                                    MatTam
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <!--<a href="index.html" class="nav-item nav-link active">Home</a>
+                                        <a href="about.html" class="nav-item nav-link">About</a>
+                                        <a href="service.html" class="nav-item nav-link">Service</a>
+                                        <a href="portfolio.html" class="nav-item nav-link">Project</a>
+                                        -->
+                                        <a href="index.html" class="nav-item nav-link">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="recommend.html" class="nav-item nav-link">Recommend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Evaluation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <!--<div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                            <div class="dropdown-menu">
+                                                <a href="#" class="dropdown-item">Sub Item 1</a>
+                                                <a href="#" class="dropdown-item">Sub Item 2</a>
+                                            </div>
+                                        </div>
+                                        -->
+                                        <!--<a href="#" class="btn">Get A Quote</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero row align-items-center">
+                        <!--<div class="form">
+                            <h3>Select the Food</h3>
+                            <form>
+                                <input class="form-control" type="text" placeholder="Food">
+                                음식을 추천받고 Food 칸에 입력되게 하기
+                                <button type="button" class="btn btn-block" onClick="location.href=''">Recommend Menu</button>
+                            </form>
+                        </div>
+                        <div class="form">
+                            <h3>Select the Restaurant</h3>
+                            <form>
+                                <input class="form-control" type="text" placeholder="Address">
+                                <button type="button" class="btn btn-block" onClick="location.href='service.html'">Start -></button>
+                            </form>
+                        </div>
+                        -->
+                        <div class="col-md-7">
+                            <h2>Fast & Convenient</h2>
+                            <h2><span>Recommend</span> Service</h2>
+                            <p>Find your own restaurants fit your taste in Seoul</p>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form">
+                                <h3>Sign in to MatTam</h3>
+                                <form>
+                                    <input class="form-control" type="text" placeholder="ID">
+                                    <input class="form-control" type="text" placeholder="Password">
+                                    <button type="button" class="btn btn-block" onClick="location.href='portfolio.html'">  Sign up</button>
+                                    <a href="single.html" class="nav-item nav-link">Register</a>
+                                    <a href="contact.html" class="nav-item nav-link">Forget Info?</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Hot Post</h2>
+                    </div>
+                    <a href=""><p>Read more -></p></a>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Korean Food</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                <a class="btn" href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Japanese Food</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                <a class="btn" href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Chinese Food</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                <a class="btn" href="">Read More</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <h3>Western Food</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                <a class="btn" href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="../../static/lib/easing/easing.min.js"></script>
+        <script src="../../static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="../../static/lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="../../static/lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

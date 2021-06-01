@@ -20,4 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurants/', include('restaurants.urls')),
     path('account/', include('account.urls')),
+    path('mainpage/', include('mainpage.urls')),
+    # path('recommend/', include('recommend.urls')),
 ]
