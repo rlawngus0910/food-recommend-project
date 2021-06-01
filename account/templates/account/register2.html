@@ -1,4 +1,4 @@
-{% load static %}
+<!-- single.html = register.html-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -33,7 +33,7 @@
                         <div class="col-lg-3">  
                             <div class="brand"> <!-- brand는 앱 이름 넣기 -->
                                 <!--만약 로그인을 한 이후라면 index.html이 아닌 페이지를 불러야 될지도? 로그인 기능을 잘 모릅니다.-->
-                                <a href="index.html">
+                                <a href="portfolio.html">
                                     MatTam
                                     <!-- <img src="img/logo.png" alt="Logo"> -->
                                 </a>
@@ -70,7 +70,7 @@
                                         <a href="service.html" class="nav-item nav-link">Service</a>
                                         <a href="portfolio.html" class="nav-item nav-link">Project</a>
                                         -->
-                                        <a href="index.html" class="nav-item nav-link">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="portfolio.html" class="nav-item nav-link">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                         <a href="" class="nav-item nav-link">Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                         <a href="recommend.html" class="nav-item nav-link">Recommend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
                                         <a href="" class="nav-item nav-link">Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -89,86 +89,26 @@
                             </div>
                         </div>
                     </div>
-                    
                     <div class="hero row align-items-center">
-                        <!--<div class="form">
-                            <h3>Select the Food</h3>
-                            <form>
-                                <input class="form-control" type="text" placeholder="Food">
-                                음식을 추천받고 Food 칸에 입력되게 하기
-                                <button type="button" class="btn btn-block" onClick="location.href=''">Recommend Menu</button>
-                            </form>
-                        </div>
-                        <div class="form">
-                            <h3>Select the Restaurant</h3>
-                            <form>
-                                <input class="form-control" type="text" placeholder="Address">
-                                <button type="button" class="btn btn-block" onClick="location.href='service.html'">Start -></button>
-                            </form>
-                        </div>
-                        -->
-                        <div class="col-md-7">
-                            <h2>Fast & Convenient</h2>
-                            <h2><span>Recommend</span> Service</h2>
-                            <p>Find your own restaurants fit your taste in Seoul</p>
-                        </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="form">
-                                <h3>Sign in to MatTam</h3>
+                                <h3>Edit</h3>
                                 <form>
-                                    <input class="form-control" type="text" placeholder="ID">
                                     <input class="form-control" type="text" placeholder="Password">
-                                    <button type="button" class="btn btn-block" onClick="location.href='portfolio.html'">  Sign up</button>
-                                    <a href="../../../account/register" class="nav-item nav-link">Register</a>
-                                    <a href="contact.html" class="nav-item nav-link">Forget Info?</a>
+                                    <input class="form-control" type="text" placeholder="Password Check">
+                                    <input class="form-control" type="text" placeholder="E-mail">
+                                    <input class="form-control" type="text" placeholder="Nickname">
+                                    <input class="form-control" type="text" placeholder="Address">
+                                    <input class="form-control" type="text" placeholder="birth year">
+                                    <font size="3em" color="white">
+                                        <input type="checkbox" name="sex" id="man" value="man">
+                                        <label for="man">Man&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="checkbox" name="sex" id="woman" value="woman">
+                                        <label for="woman">Woman</label>
+                                    </font>
+                                    <!-- 회원가입 완료 -->                              
+                                    <button type="button" class="btn btn-block" onClick="location.href='index.html'">Edit-></button>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Hot Post</h2>
-                    </div>
-                    <a href=""><p>Read more -></p></a>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="service-item">
-                                <h3>Korean Food</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                                </p>
-                                <a class="btn" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="service-item">
-                                <h3>Japanese Food</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                                </p>
-                                <a class="btn" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="service-item">
-                                <h3>Chinese Food</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                                </p>
-                                <a class="btn" href="">Read More</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="service-item">
-                                <h3>Western Food</h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
-                                </p>
-                                <a class="btn" href="">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -189,6 +129,6 @@
         <script src="../../static/lib/lightbox/js/lightbox.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script src="../../static/js/main.js"></script>
     </body>
 </html>
