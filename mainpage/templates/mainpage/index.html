@@ -117,26 +117,37 @@
                             <h2><span>Recommend</span> Service</h2>
                             <p>Find your own restaurants fit your taste in Seoul</p>
                         </div>
-
+                        <div class="col-md-5">
                         {% if request.session.user %}
                             <p>{{ request.session.user }}님 환영합니다.</p>
-                            <a href="logout/" class="nav-item nav-link">Logout</a>
-                        {% else %}
-                            <div class="col-md-5">
-                                <div class="form">
-                                    <h3>Sign in to MatTam</h3>
-                                    <form method="POST" action = ".">
-                                        {% csrf_token %}
-                                        <input class="form-control" type="text" placeholder="ID" name="id" required>
-                                        <input class="form-control" type="password" placeholder="Password" name="password" required>
-                                        <button type="submit" class="btn btn-block">Login</button>
-                                        <a href="../../../account/register" class="nav-item nav-link">Register</a>
-                                        <a href="contact.html" class="nav-item nav-link">Forget Info?</a>
-                                    </form>
-                                </div>
-                            </div>
 
+                            <button class="btn btn-block" onclick="location.href = 'logout/'" style="
+                                    position: relative;
+                                    padding: 10px 35px;
+                                    font-size: 16px;
+                                    text-transform: uppercase;
+                                    color: #000000;
+                                    border: none;
+                                    border-radius: 5px;
+                                    background: #FFD662;
+                                    transition: .3s;
+                                ">Logout</button>
+                        {% else %}
+                            <div class="form">
+                                <h3>Sign in to MatTam</h3>
+                                <form method="POST" action = ".">
+                                    {% csrf_token %}
+                                    <input class="form-control" type="text" placeholder="ID" name="id" required>
+                                    <input class="form-control" type="password" placeholder="Password" name="password" required>
+                                    <button type="submit" class="btn btn-block">Login</button>
+                                    <a href="../../../account/register" class="nav-item nav-link">Register</a>
+                                    <a href="contact.html" class="nav-item nav-link">Forget Info?</a>
+                                </form>
+                            </div>
                         {% endif %}
+                        </div>
+
+
                     </div>
                 </div>
             </div>
