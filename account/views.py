@@ -26,7 +26,6 @@ def register(request):
             return render(request, 'account/register3.html', {"message" : "입력한 비밀번호가 다릅니다."})
 
         else:
-
             try:
                 cursor = connection.cursor()
                 password = make_password(password)
