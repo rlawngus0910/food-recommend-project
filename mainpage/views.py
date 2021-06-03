@@ -15,10 +15,8 @@ def indexView(request):
         try:
             cursor = connection.cursor()
             SQL = "SELECT id, password FROM accounts WHERE id = %s"
-            print(id)
 
             cursor.execute(SQL, [id])
-            print(id)
             user = cursor.fetchall()
 
             connection.commit()
@@ -30,14 +28,8 @@ def indexView(request):
             userId = user[0][0]
             userPassword = user[0][1]
 
-            print(userId)
-            print(userPassword)
             if check_password(password, userPassword):
-                print('여기냐?1')
                 request.session['user'] = userId
-                print('여기냐?2')
-                # context['userSession'] = request.session['user']
-                print('여기냐?3')
                 return render(request, 'mainpage/index.html')
 
             else:

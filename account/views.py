@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
 from .models import Accounts
@@ -34,7 +34,7 @@ def register(request):
 
                 connection.commit()
                 connection.close()
-                return render(request, '../../mainpage/templates/mainpage/index.html', {"message" : "회원가입이 완료되었습니다."})
+                return redirect('../../mainpage/')
 
             except:
                 connection.rollback()
