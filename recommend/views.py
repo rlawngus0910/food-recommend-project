@@ -6,8 +6,6 @@ def recommendView(request):
     return render(request, 'recommend/Q&A(1).html')
 
 def recommendResultView(request):
-    # price = request.POST.get('price')
-    print(request.GET)
     price = request.GET.id('price')
     who = request.GET.id('who')
     size = request.GET.id('size')
