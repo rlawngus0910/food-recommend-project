@@ -2,8 +2,8 @@
     background: linear-gradient(rgb(0 12 156 / 70%), rgb(0 55 156 / 80%), rgb(0 55 156 / 90%)),url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-size:100%;
-    height: 490px;
-    width: 800px;
+
+    width: 1200px;
     border-radius: 40px;
     margin-bottom: 20px;
     font-family: 'Jua', sans-serif;
@@ -24,9 +24,9 @@ ul{
 }
 
 .Answer{
-    height: 300px;
-    width: 730px;
-    margin-top: 20px;
+    height: 400px;
+    width: 1060px;
+    margin-top: 22px;
 }
 
 .Answer1{

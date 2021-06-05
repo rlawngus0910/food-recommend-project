@@ -1,0 +1,43 @@
+.bg{
+    background: linear-gradient(rgb(0 12 156 / 70%), rgb(0 55 156 / 80%), rgb(0 55 156 / 90%)),url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+
+    width: 1200px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    font-family: 'Jua', sans-serif;
+}
+
+.Question{
+    background-color:  rgba(255, 255, 255, .3);
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    height: 100px;
+    margin-top: 30px;
+    padding-top: 35px;
+}
+
+ul{
+    list-style: none;
+}
+
+.Answer{
+    height: 400px;
+    width: 770px;
+    margin-top: 22px;
+}
+
+.Answer1{
+    background-color:  rgba(255, 255, 255, .3);
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+.Q_num{
+    text-align: center;
+    color: yellow;
+}

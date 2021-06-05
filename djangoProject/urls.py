@@ -21,5 +21,6 @@ urlpatterns = [
     path('restaurants/', include('restaurants.urls')),
     path('account/', include('account.urls')),
     path('mainpage/', include('mainpage.urls')),
+    path('recommend/', include('recommend.urls')),
     # path('recommend/', include('recommend.urls')),
 ]

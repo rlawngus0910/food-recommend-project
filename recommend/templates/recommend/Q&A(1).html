@@ -2,7 +2,7 @@
 
 Copyright (c) 2011-2021 Twitter, Inc.
 Copyright (c) 2011-2021 The Bootstrap Authors -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -27,68 +27,106 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/Q&A.css">
+        <link href="../../static/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../static/css/Q&A.css">
     </head>
 
     <body>
-            <!-- Header Start -->
-            <div class="header home">
-                <div class="container-fluid">
-                    <div class="header-top row align-items-center">
-                        <div class="col-lg-3">
-                            <div class="brand">
-                                <!--여기에 메인화면 링크 연결-->
-                                <a href="index.html">
-                                    MatTam
-                                </a>
+        <!-- Header Start -->
+        <div class="header home">
+            <div class="container-fluid">
+                <div class="header-top row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="brand">
+                            <!--여기에 메인화면 링크 연결-->
+                            <a href="index.html">
+                                MatTam
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="topbar">
+                            <div class="topbar-col">
+                                <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                            </div>
+                            <div class="topbar-col">
+                                <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                            </div>
+                            <div class="topbar-col">
+                                <div class="topbar-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-9">
-                            <div class="topbar">
-                                <div class="topbar-col">
-                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
-                                </div>
-                                <div class="topbar-col">
-                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
-                                </div>
-                                <div class="topbar-col">
-                                    <div class="topbar-social">
-                                        <a href=""><i class="fab fa-twitter"></i></a>
-                                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a href=""><i class="fab fa-youtube"></i></a>
-                                        <a href=""><i class="fab fa-instagram"></i></a>
-                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="navbar navbar-expand-lg bg-light navbar-light">
-                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                                    <div class="navbar-nav ml-auto">
-                                        <!--메인 링크 연결-->
-                                        <a href="about.html" class="nav-item nav-link">Home</a>
-                                        <!--첫번째 문제 페이지 링크 연결-->
-                                        <a href="Q&A(1).html" class="nav-item nav-link">Recommend</a>
-                                        <!--게시판 메인 페이지 링크 연결-->
-                                        <a href="portfolio.html" class="nav-item nav-link">Post</a>
-                                        <!--별점 작성 페이지 링크 연결-->
-                                        <a href="single.html" class="nav-item nav-link">Evaluation</a>
-                                    </div>
+                        <div class="navbar navbar-expand-lg bg-light navbar-light">
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                <div class="navbar-nav ml-auto">
+                                    <!--메인 링크 연결-->
+                                    <a href="about.html" class="nav-item nav-link">Home</a>
+                                    <!--첫번째 문제 페이지 링크 연결-->
+                                    <a href="Q&A(1).html" class="nav-item nav-link">Recommend</a>
+                                    <!--게시판 메인 페이지 링크 연결-->
+                                    <a href="portfolio.html" class="nav-item nav-link">Post</a>
+                                    <!--별점 작성 페이지 링크 연결-->
+                                    <a href="single.html" class="nav-item nav-link">Evaluation</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Header End -->
-            <div class="bg container border border-2 border-primary">
-                <div class="Question border rounded-pill border-1 border-primary">Q1. 어떤 가격의 식당을 선호하나요?</div>
-                <ul class="Answer list-group list-group-horizontal">
-                    <!--다음 문제로 이동-->
-                    <button type="button" onclick="location.href='Q&A(2).html'" class="Answer1 btn btn-outline-primary col-md-6">허름하더라도 저렴한 곳</button>
-                    <button type="button" onclick="location.href='Q&A(2).html'" class="Answer1 btn btn-outline-primary col-md-6">비싸더라도 럭셔리한 곳</button>
-                </ul>
-                <div class="Q_num">1/4</div>
-            </div>
+        </div>
+        <!-- Header End -->
+        <div class="bg container border border-2 border-primary" id="firstQuestionContainer">
+            <div class="Question border rounded-pill border-1 border-primary">Q1. 어떤 가격의 식당을 선호하나요?</div>
+            <ul class="Answer list-group list-group-horizontal">
+                <!--다음 문제로 이동-->
+                <selected name="price">
+                    <option type="button" id="firstQuestion" name="price" class="Answer1 btn btn-outline-primary col-md-6" value="허름하더라도 저렴한 곳">허름하더라도 저렴한 곳</option>
+                    <option type="button" id="firstQuestion" name="price" class="Answer1 btn btn-outline-primary col-md-6" value="비싸더라도 럭셔리한 곳">비싸더라도 럭셔리한 곳</option>
+                </selected>
+            </ul>
+            <div class="Q_num">1/4</div>
+        </div>
+
+        <div class="bg container border border-2 border-primary" id="secondQuestionContainer" style="display:none">
+            <div class="Question border rounded-pill border-1 border-primary">Q2.누구와 함께 가나요?</div>
+            <ul class="Answer list-group list-group-horizontal" style="height: 400px;width: 770px;margin-top: 22px;">
+                <!--다음 문제로 이동-->
+                <input type="button" id="secondQuestion" name="who" class="Answer1 btn btn-outline-primary col-md-4" value="친구">
+                <input type="button" id="secondQuestion" name="who" class="Answer1 btn btn-outline-primary col-md-4" value="가족">
+                <input type="button" id="secondQuestion" name="who" class="Answer1 btn btn-outline-primary col-md-4" value="연인">
+                <input type="button" id="secondQuestion" name="who" class="Answer1 btn btn-outline-primary col-md-4" value="나 자신">
+            </ul>
+            <div class="Q_num">2/4</div>
+        </div>
+
+        <div class="bg container border border-2 border-primary" id="thirdQuestionContainer" style="display:none">
+            <div class="Question border rounded-pill border-1 border-primary">Q3. 언제 식당에 방문할 건가요?</div>
+            <ul class="Answer list-group list-group-horizontal" style="width: 770px;">
+                <input type="button" id="thirdQuestion" name="time" class="Answer1 btn btn-outline-primary col-md-4" value="아침">
+                <input type="button" id="thirdQuestion" name="time" class="Answer1 btn btn-outline-primary col-md-4" value="점심">
+                <input type="button" id="thirdQuestion" name="time" class="Answer1 btn btn-outline-primary col-md-4" value="저녁">
+                <input type="button" id="thirdQuestion" name="time" class="Answer1 btn btn-outline-primary col-md-4" value="밤">
+            </ul>
+            <div class="Q_num">3/4</div>
+        </div>
+
+        <div class="bg container border border-2 border-primary" id="fourthQuestionContainer" style="display:none">
+            <div class="Question border rounded-pill border-1 border-primary">Q4.식당의 크기는 어땠으면 좋겠나요?</div>
+            <ul class="Answer list-group list-group-horizontal">
+                <!--다음 문제로 이동-->
+                <button type="submit" id="fourthQuestion" class="Answer1 btn btn-outline-primary col-md-6">컸으면 좋겠다</button>
+                <button type="submit" id="fourthQuestion" class="Answer1 btn btn-outline-primary col-md-6">작았으면 좋겠다</button>
+            </ul>
+            <div class="Q_num">4/4</div>
+        </div>
+
+        <script src="../../static/js/question.js"></script>
     </body>
+
 </html>
