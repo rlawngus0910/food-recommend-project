@@ -2,7 +2,7 @@
 
 Copyright (c) 2011-2021 Twitter, Inc.
 Copyright (c) 2011-2021 The Bootstrap Authors -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -27,8 +27,8 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/service.css">
+        <link href="../../static/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../static/css/service.css">
     </head>
 
     <body>
@@ -82,7 +82,7 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
                 </div>
             </div>
             <!-- Header End -->
-            <div class="allbg container">
+            <div class="allbg container" style="width: 1200px;">
                 {% csrf_token %}
                 <div id="name" class="container">
                     <p>추천하는 음식점</p>
@@ -90,11 +90,23 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
     
                 <div class="form container">
                     <!--아래의 div로 감싸진 부분이 한개의 음식점을 추천하는 파트임-->
+
+                    {% for restaurant in restaurants %}
                     <div id="cho" class="container">
                         <ul class="list-group list-group-horizontal">
                              <li class="list-group-item">
                                  <!--한식, 중식, 일식, 양식, 기타 중 하나의 이미지가 들어감(img 파일 안에 각 이미지 넣어둠)-->
-                                 <img src="img/hansik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% if restaurant.category == '한식' %}
+                                    <img src="../../static/img/hansik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% elif restaurant.category == '중식' %}
+                                     <img src="../../static/img/jungsik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% elif restaurant.category == '일식' %}
+                                     <img src="../../static/img/illsik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% elif restaurant.category == '양식' %}
+                                     <img src="../../static/img/yangsik.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% else %}
+                                     <img src="../../static/img/etc.jpg" alt="..." width="150" height="150" style="margin-top: 10px;">
+                                 {% endif %}
                              </li>
         
                             <li class="list-group-item">
@@ -103,17 +115,24 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
                             <li class="list-group-item border-0" style="padding-left: 1px; padding-bottom: 1px; padding-top: 1px;">
                             <ul class="list-group list-group-horizontal">
                                 <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px;">가게이름: </li>
-                                <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px; width: 200px;">(DB로 불러온 이름)</li>
+                                <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px; width: 200px;">{{ restaurant.name }}</li>
                                 <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 1px;">
-                                    <img src="img/star.PNG" class="img-thumbnail" alt="..." width="70" height="70">
+                                    <img src="../../static/img/star.PNG" class="img-thumbnail" alt="..." width="70" height="70">
                                 </li>
                             </ul>
+
                             </li>
-                            
+                            <li class="list-group-item border-0" style="padding-left: 1px; padding-top: 1px;">
+                            <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right: 5px;">주소: </li>
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right:5px; width: 250px;">{{ restaurant.location }}</li>
+                            </ul>
+                            </li>
+
                             <li class="list-group-item border-0" style="padding-left: 1px; padding-top: 1px;">
                             <ul class="list-group list-group-horizontal">
                                 <li class="list-group-item border-0" style="padding-left: 1px; padding-right: 5px;">메뉴: </li>
-                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right:5px; width: 250px;">(메뉴들)</li>
+                                <li class="list-group-item border-0" style="padding-left: 1px; padding-right:5px; width: 250px;">{{ restaurant.menu }}</li>
                                 <li class="list-group-item border-0" style="padding-left: 1px; padding-right: 1px;">0km</li>
                             </ul>
                             </li>
@@ -123,6 +142,7 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
                         </li>
                     </ul>
                     </div>
+                    {% endfor %}
                     <!--여기까지가 하나의 음식점을 추천해주는 부분. 이 부분이 여러개 필요함-->
 
                 </div>

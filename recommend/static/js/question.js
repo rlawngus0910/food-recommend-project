@@ -36,7 +36,7 @@ function init(){
     for(var i = 0;i < fourthQuestionBtnList.length;i++){
         fourthQuestionBtnList[i].addEventListener("click",function (evt) {
             size = evt.target.value;
-            var url = "result/?price=" + price + "&who=" + who + "&time=" + time;
+            var url = "result/?price=" + price + "&who=" + who + "&time=" + time + "&size=" + size;
             location.href = url
         });
     }
