@@ -27,8 +27,8 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="../../static/css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../static/css/service.css">
+        <link href="../../static/css/style.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../static/css/service.css">
     </head>
 
     <body>
@@ -117,7 +117,7 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
                                 <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px;">가게이름: </li>
                                 <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 5px; width: 200px;">{{ restaurant.name }}</li>
                                 <li class="list-group-item border-0 " style="padding-left: 1px; padding-right: 1px;">
-                                    <img src="../../static/img/star.PNG" class="img-thumbnail" alt="..." width="70" height="70">
+                                    {{ restaurant.rate }}
                                 </li>
                             </ul>
 
@@ -137,7 +137,7 @@ Copyright (c) 2011-2021 The Bootstrap Authors -->
                             </ul>
                             </li>
                             <!--해당 음식점의 게시글이 모인 페이지 링크 연결-->
-                            <button type="button" onclick="location.href='https://www.naver.com/'" class="btn btn-outline-primary">더보기</button>
+                            <button type="button" onclick="location.href='../detail/{{ restaurant.id }}/'" class="btn btn-outline-primary">더보기</button>
                         </ul>
                         </li>
                     </ul>

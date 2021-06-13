@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>상세 정보</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href=".{% static 'css/Q&A.css' %}">
+        <link rel="stylesheet" href=".{% static 'css/evaluation.css' %}">
+        <link rel="stylesheet" href=".{% static 'css/evalution-style.css' %}">
+    </head>
+    <style>
+
+        .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    justify-content: space-around;
+    padding: 0 0.2em;
+    width: 5em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .star-rating input {
+    display: none;
+  }
+
+  .star-rating label {
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2.3px;
+    -webkit-text-stroke-color: #2b2a29;
+    cursor: pointer;
+  }
+
+  .star-rating :checked ~ label {
+    -webkit-text-fill-color: yellow;
+  }
+
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    -webkit-text-fill-color: yellow;
+  }
+  .header .hero .form input,
+.header .hero .form select,
+.header .hero .form textarea {
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .2);
+}
+
+  .header .hero .form .btn {
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+    </style>
+    <body>
+        <!-- Header Start -->
+        <div class="header home">
+            <div class="container-fluid">
+                <div class="header-top row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="brand">
+                            <!--여기에 메인화면 링크 연결-->
+                            <a href="index.html">
+                                MatTam
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="topbar">
+                            <div class="topbar-col">
+                                <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                            </div>
+                            <div class="topbar-col">
+                                <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                            </div>
+                            <div class="topbar-col">
+                                <div class="topbar-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar navbar-expand-lg bg-light navbar-light">
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                <div class="navbar-nav ml-auto">
+                                    <!--메인 링크 연결-->
+                                    <a href="/mainpage" class="nav-item nav-link">Home</a>
+                                    <!--첫번째 문제 페이지 링크 연결-->
+                                    <a href="Q&A(1).html" class="nav-item nav-link">Recommend</a>
+                                    <!--게시판 메인 페이지 링크 연결-->
+                                    <a href="portfolio.html" class="nav-item nav-link">Post</a>
+                                    <!--별점 작성 페이지 링크 연결-->
+                                    <a href="single.html" class="nav-item nav-link">Evaluation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>Detail</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="#map">Map</a>
+                            <a href="#detail-name">Detail</a>
+                            <a href="#comment">Comment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div id="map" style="width:800px;height:600px; margin:auto;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d03fca4a6ee6e60911e305abfdc09904&libraries=services"></script>
+    <script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+
+		var geocoder = new kakao.maps.services.Geocoder();
+
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('{{ restaurants.location }}', function(result, status) {
+
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+        // 결과값으로 받은 위치를 마커로 표시합니다
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: coords
+        });
+
+        // 인포윈도우로 장소에 대한 설명을 표시합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            content: '<div style="width:150px;text-align:center;padding:6px 0;">{{ restaurants.name }}</div>'
+        });
+        infowindow.open(map, marker);
+
+        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+        map.setCenter(coords);
+    }
+});
+	</script>
+    <div id="detail-name" style="margin-left:25%; padding-top:40px;">
+        <h1 style="font-weight: bold;">{{ restaurants.name }}</h1>
+        <h2>{{ restaurants.location }}</h2>
+        <h3>{{ restaurants.category }}</h3>
+    </div>
+        <div class="form" style="
+    padding-top: 50px;
+    width: 800px;
+    margin: auto;
+">
+                    <h3 style="
+    color: #00539C;
+">별점 주기</h3>
+                    <form action = "." method="POST">
+                        {% csrf_token %}
+                        <input class="form-control" type="text" name="title" placeholder="제목">
+                        <div class="star-rating space-x-4 mx-auto">
+                            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings">
+                            <label for="5-stars" class="star pr-4">★</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings">
+                            <label for="4-stars" class="star">★</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings">
+                            <label for="3-stars" class="star">★</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings">
+                            <label for="2-stars" class="star">★</label>
+                            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings">
+                            <label for="1-star" class="star">★</label>
+                        </div>
+                        <input class="form-control" type="text" name="comment" placeholder="한줄평">
+                        <button class="btn btn-block" type="submit" style="
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+    margin-top: 20px;
+">주기</button>
+                    </form>
+                </div>
+
+        <div id="comment" style="margin: auto; padding-top: 50px;width: 800px;">
+            <h3 style="color: #00539C;">한줄평</h3>
+            {% for post in posts %}
+                <div id="one-comment" style="margin-bottom: 40px;">
+                <h2 style="
+    font-weight: bold;
+    color: black;
+">{{ post.title }}</h2>
+                <h4>{{ post.comment }}</h4>
+                <h4>★ {{ post.rate }}</h4>
+                <h4>{{ post.user_id }}</h4>
+                </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
