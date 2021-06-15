@@ -185,9 +185,10 @@
 });
 	</script>
     <div id="detail-name" style="margin-left:25%; padding-top:40px;">
-        <h1 style="font-weight: bold;">{{ restaurants.name }}</h1>
+        <h1 style="font-weight: bold; color:black;">{{ restaurants.name }}</h1>
         <h2>{{ restaurants.location }}</h2>
         <h3>{{ restaurants.category }}</h3>
+        <h3><p style="color : red;">★</p>{{ restaurants.rate }}</h3>
     </div>
         <div class="form" style="
     padding-top: 50px;
@@ -237,7 +238,7 @@
     color: black;
 ">{{ post.title }}</h2>
                 <h4>{{ post.comment }}</h4>
-                    <h4><p style="color : red;">★</p>> {{ post.rate }}</h4>
+                    <h4><p style="color : red;">★</p> {{ post.rate }}</h4>
                 <h4>{{ post.user_id }}</h4>
                 </div>
             {% endfor %}

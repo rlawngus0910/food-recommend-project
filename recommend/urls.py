@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('', views.recommendView),
     path('result/', views.recommendResultView),
-    path('detail/<int:id>/', views.detailView)
+    path('detail/<int:id>/', views.detailView),
+    path('menu/', views.recommendMenuView),
 ]
