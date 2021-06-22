@@ -1,73 +1,141 @@
-<html>
+<!-- single.html = register.html-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CleanMe - Cleaning Company Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-</head>
-<body>
-<div class= "container">
-    <div class = "row mt-5">
-        <div class = "col-12 text-center">
-            <h1>회원가입</h1>
-        </div>
-    </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="../../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="../../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
+        <!-- Template Stylesheet -->
+        <link href="../../static/css/style.css" rel="stylesheet">
+    </head>
 
-<!--            폼 안에다가 입력해줘야한다. (안써주면 에러발생)
-     csrf_token 폼의 경우에는 , 데이터를 서버에 전달하는 기능.이때 암호화된 키를 숨겨놓아 크로스도메인을 막기 위함. -->
-<!-- bootstrap -component - forms -->
-<div class= "container">
-    <div class = "row mt-5">
-        {{error}}
-        {{ success }}
-        <div class = "col-12 ">
-            <div class = "row mt-5">
-                <div class = "col-12 ">
-                    <form method = "POST" action = ".">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <label for="username">사용자 ID</label>
-                            <input
-                                    type="text"
-                                    class="form-control"
-                                    id="userId"
-                                    placeholder="사용자 이름"
-                                    name="id">
-                            <!-- 이 name 값으로 정보가 전달된다 -->
+    <body>
+        <script>
+            if("{{ message }}".length != 0)
+                alert("{{message}}");
+        </script>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">  
+                            <div class="brand"> <!-- brand는 앱 이름 넣기 -->
+                                <!--만약 로그인을 한 이후라면 index.html이 아닌 페이지를 불러야 될지도? 로그인 기능을 잘 모릅니다.-->
+                                <a href="index.html">
+                                    MatTam
+                                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                                </a>
+                            </div>
                         </div>
+                        <div class="col-lg-9">
+                            <div class="topbar">
+                                <div class="topbar-col">
+                                    <a href="tel:+012 345 67890"><i class="fa fa-phone-alt"></i>+012 345 67890</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <a href="mailto:info@example.com"><i class="fa fa-envelope"></i>info@example.com</a>
+                                </div>
+                                <div class="topbar-col">
+                                    <div class="topbar-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
 
-                        <div class="form-group">
-                            <label for="password">비밀번호</label>
-                            <input type="password"
-                                   class="form-control"
-                                   id="password"
-                                   placeholder="비밀번호"
-                                   name= "password">
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <!--<a href="index.html" class="nav-item nav-link active">Home</a>
+                                        <a href="about.html" class="nav-item nav-link">About</a>
+                                        <a href="service.html" class="nav-item nav-link">Service</a>
+                                        <a href="portfolio.html" class="nav-item nav-link">Project</a>
+                                        -->
+                                        <a href="index.html" class="nav-item nav-link">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="recommend.html" class="nav-item nav-link">Recommend&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Post&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <a href="" class="nav-item nav-link">Evaluation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        <!--<div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                            <div class="dropdown-menu">
+                                                <a href="#" class="dropdown-item">Sub Item 1</a>
+                                                <a href="#" class="dropdown-item">Sub Item 2</a>
+                                            </div>
+                                        </div>
+                                        -->
+                                        <!--<a href="#" class="btn">Get A Quote</a>-->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="re_password">비밀번호 확인</label>
-                            <input
-                                    type= "password"
-                                    class="form-control"
-                                    id="re_password"
-                                    placeholder="비밀번호 확인"
-                                    name = "re_password">
+                    </div>
+                    <div class="hero row align-items-center">
+                        <div class="col-md-6">
+                            <div class="form">
+                                <h3>Register</h3>
+                                <form method = "POST" action=".">
+                                    {% csrf_token %}
+                                    <input class="form-control" type="text" name="id" placeholder="ID" required>
+                                    <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                    <input class="form-control" type="password" name="re_password" placeholder="Password Check" required>
+                                    <input class="form-control" type="text" name="e-mail" placeholder="E-mail" required>
+                                    <input class="form-control" type="text" name="nickname" placeholder="Nickname" required>
+                                    <input class="form-control" type="text" name="address" placeholder="Address" required>
+                                    <input class="form-control" type="text" name="birth" placeholder="birth year" required>
+                                    <font size="3em" color="white">
+                                        <input type="checkbox" name="gender" id="man" value="남자">
+                                        <label for="man">Man&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="checkbox" name="gender" id="woman" value="여자">
+                                        <label for="woman">Woman</label>
+                                    </font>
+                                    <!-- 회원가입 완료 -->                              
+                                    <button type="submit" class="btn btn-block">Sign Up</button>
+                                </form>
+                            </div>
                         </div>
-
-                        <button type="submit" class="btn btn-primary">등록</button>
-                    </form>
+                    </div>
                 </div>
             </div>
+            
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         </div>
-    </div>
-</div>
 
-</body>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="../../static/lib/easing/easing.min.js"></script>
+        <script src="../../static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="../../static/lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="../../static/lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="../../static/js/main.js"></script>
+    </body>
 </html>

@@ -8,7 +8,7 @@ from django.db import connection
 
 def register(request):
     if request.method == "GET":
-        return render(request, 'account/register3.html')
+        return render(request, 'account/register.html')
 
     elif request.method == "POST":
         id = request.POST.get('id')
@@ -23,7 +23,7 @@ def register(request):
         res_data = {}
 
         if password != re_password:
-            return render(request, 'account/register3.html', {"message" : "입력한 비밀번호가 다릅니다."})
+            return render(request, 'account/register.html', {"message" : "입력한 비밀번호가 다릅니다."})
 
         else:
             try:
@@ -38,6 +38,6 @@ def register(request):
 
             except:
                 connection.rollback()
-                return render(request, 'account/register3.html', {"message" : "DB 오류 발생"})
+                return render(request, 'account/register.html', {"message" : "DB 오류 발생"})
 
 
